@@ -82,7 +82,7 @@ new ShapeLibraryPalette ({
       outline:DEFAULT_OUTLINE,
       fill:DEFAULT_FILL,
       outlineWidth:DEFAULT_OUTLINE_WIDTH,
-      text:el.getAttribute("data-jtk-type")
+      text:el.getAttribute("title")        // use the title from the shape, which may be different based on the shape set.
     }
   }
 })
