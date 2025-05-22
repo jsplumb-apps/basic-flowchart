@@ -1,4 +1,5 @@
 import { DEFAULT_TEXT_COLOR, DEFAULT_OUTLINE, DEFAULT_FILL, DEFAULT_OUTLINE_WIDTH } from './constants';
+import MY_SHAPES from './shapes';
 import './style.css'
 
 import {
@@ -12,11 +13,11 @@ import {
   PlainArrowOverlay
 } from '@jsplumbtoolkit/browser-ui'
 
-const canvas = document.querySelector<Element>('#canvas')
-const palette = document.querySelector<Element>('#palette')
+const canvas = document.querySelector<Element>('#canvas') as Element
+const palette = document.querySelector<Element>('#palette') as HTMLElement
 
 // shape library contains the shapes that the app can use.
-const shapeLibrary = new ShapeLibraryImpl([FLOWCHART_SHAPES, BASIC_SHAPES]);
+const shapeLibrary = new ShapeLibraryImpl([MY_SHAPES, FLOWCHART_SHAPES, BASIC_SHAPES]);
 
 // create an instance of JsPlumb Toolkit
 const model = newInstance()
@@ -73,7 +74,7 @@ const surface = model.render(canvas, {
 // attach a palette. it displays the shapes in the shape library we set on the surface.
 new ShapeLibraryPalette ({
   container:palette,
-  initialSet:FLOWCHART_SHAPES.id,
+  initialSet:MY_SHAPES.id,
   surface,
   dataGenerator:(el: BrowserElement) => {
     // payload for a newly dragged element
