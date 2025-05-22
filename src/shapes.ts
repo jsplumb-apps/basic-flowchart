@@ -45,7 +45,7 @@ const MY_SHAPES = {
 
         ansikte:{
           type:"ansikte",
-          label:"Ansikte",
+          label:"",
           template:`<svg:g>
                       <svg:circle cx="{{width/2}}" cy="{{height/2}}" r="{{(width/2)}}"/>
                       <svg:path d="M {{width/4}} {{height*3/4}} L {{width*3/4}} {{height*3/4}}"/>
