@@ -1,6 +1,18 @@
 {
   "nodes": [
     {
+      "id":"1",
+      "type":"ansikte",
+      "category":"AP",
+      "left":600,
+      "top":-1000,
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "textColor":"#000000",
+      "width":200,
+      "height":200
+    },
+    {
       "id": "2",
       "type": "decision",
       "text": "Is it in the public domain?",
